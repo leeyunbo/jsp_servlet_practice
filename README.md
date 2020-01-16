@@ -1,7 +1,7 @@
 # jsp_servlet_spring
 jsp와 servlet, Spring Fw에 대한 이해
 
-<H2> SERVLET -> JSP -> SPRING FW <H2> 
+<H2> SERVLET -> JSP -> SPRING FW </H2> 
 <HR>
 <ul>
   <li> SERVLET, JSP, SPRING 순으로 공부하며 기초를 탄탄하게 쌓아가기 </li>

@@ -10,7 +10,6 @@
 <%
 	String action = request.getParameter("action");
 	if(action.equals("list")) {
-		System.out.println("list 왔다 제발 씨발");
 		request.setAttribute("dbList",ab.getDBList());
 		pageContext.forward("addrbook.jsp");
 	} else if(action.equals("insert")) {

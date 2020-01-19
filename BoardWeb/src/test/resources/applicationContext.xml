@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	<bean id="tv" class="polymorphism.SamsungTV" init-method="initMethod" destroy-method="destoryMethod" scope="singleton">
-		<constructor-arg ref="sony"></constructor-arg>
-		<constructor-arg value="27000000"></constructor-arg>
+	<bean id="collectionBean" class="injection.CollectionBean">
+		<property name="addressList">
+			<list>
+				<value>서울시 강남구 역삼동</value>
+				<value>서울시 성동구 행당동</value>
+			</list>
+		</property>
+		<property name="map">
+			<map>
+				<entry>
+					<key><value>고길동</value></key>
+					<value>서울시 강남구 역삼동</value>
+				</entry>
+				<entry>
+					<key><value>마이콜</value></key>
+					<value>서울시 강서구 화곡동</value>
+				</entry>		
+			</map>
+		</property>
 	</bean>
-	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
 
 
 </beans>

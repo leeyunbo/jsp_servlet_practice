@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="apple" p:price="27000000" init-method="initMethod" destroy-method="destoryMethod" scope="singleton"> <!-- p 네임스페이스로 Setter 인젝션 인자 설정 -->
+		<!-- <constructor-arg index="0" ref="apple"></constructor-arg>
+		<constructor-arg index="1" value="27000000"></constructor-arg>  이부분이 생성자 인젝션을 위한 인자값 설정-->
+		<!-- <property name="speaker" ref="apple"></property>       
+		<property name="price" value="27000000"></property> Setter 인젝션을 위한 설정 -->
+	</bean>
+	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
+	<bean id="apple" class="polymorphism.AppleSpeaker"></bean>
+</beans>

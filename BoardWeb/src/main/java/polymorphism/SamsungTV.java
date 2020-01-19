@@ -1,20 +1,38 @@
 package polymorphism;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 public class SamsungTV implements TV {	
-	private SonySpeaker speaker;
+
+	private Speaker speaker;
 	private int price;
 	public SamsungTV() {
 		System.out.println("SamsungTV 객체 생성");
 	}
-	public SamsungTV(SonySpeaker speaker) {
-		System.out.println("===> SamsungTV 객체(2) 생성");
+	
+	public void setSpeaker(Speaker speaker) {
+		System.out.println("setSpeaker() 호출");
 		this.speaker = speaker;
 	}
-	public SamsungTV(SonySpeaker speaker, int price) {
-		System.out.println("===> SamsungTV 객체(3) 생성");
-		this.speaker = speaker;
+	public void setPrice(int price) {
+		System.out.println("setPrice() 호출");
 		this.price = price;
 	}
+	
+	
+	/*public SamsungTV(Speaker speaker) { 이부분이 생성자 인젝션 방법
+		System.out.println("SamsungTV 객체(2) 생성"); 
+		this.speaker = speaker;
+	}
+	public SamsungTV(Speaker speaker, int price) {
+		System.out.println("SamsungTV 객체(3) 생성");
+		this.speaker = speaker;
+		this.price = price;
+	}*/
+	
+	
+	
+	
 	public void initMethod() {
 		System.out.println("객체 초기화 작업 처리..");
 	}

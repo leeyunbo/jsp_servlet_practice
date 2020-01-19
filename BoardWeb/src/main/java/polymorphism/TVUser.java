@@ -7,7 +7,7 @@ public class TVUser {
 	public static void main(String[] args) {
 		/*BeanFactory beanFactory = new BeanFactory();
 		TV tv = (TV)beanFactory.getBean(args[0]);*/
-		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext.xml");
+		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContextPolymorphism.xml");
 		TV tv = (TV)factory.getBean("tv");
 		tv.powerOn();
 		tv.volumeUp();
